@@ -1,65 +1,50 @@
-**Lab Report: Development and Analysis of a Mini Honeynet in Microsoft Azure**
+# Lab Documentation: Azure Security Lab Overview
 
-**Introduction**
+## Overview
 
-This report details the creation, configuration, and analysis of a mini honeynet within Microsoft Azure. The project's primary objectives were to integrate various log sources into a Log Analytics workspace, utilize Microsoft Sentinel for generating attack maps, triggering alerts, and creating incidents, and to observe the effectiveness of security metrics before and after the implementation of security controls.
+This document outlines the steps and procedures undertaken during a comprehensive security lab involving Azure cloud services. The lab's primary focus was to set up a controlled environment to simulate cyber attacks, analyze security logs, and implement security best practices using Microsoft Azure tools. The following sections detail the lab's setup, activities, and learnings.
 
-**Lab Overview**
+### 1. Lab Setup
 
-The project comprised several key phases, each contributing to the overall setup and analysis of the honeynet:
+- **Virtual Machine Configuration**: Two virtual machines (VMs) were created, one running Linux and the other Windows. These VMs were opened to the internet, creating a honeynet environment to attract potential attacks.
+- **Networking**: Virtual networks were set up for each VM to ensure controlled communication channels. Additionally, resource groups were created for organizational purposes, with all resources assigned to the same geographical region for consistency.
+- **Security Groups and Firewall Settings**: Network Security Groups (NSGs) were configured to allow any inbound internet traffic, simulating a vulnerable network environment. The Windows VM's firewall was specifically disabled to increase its exposure to potential attacks.
 
-1. **Honeynet Creation**
-   - Developed two Virtual Machines (VMs) - one Linux, one Windows - and exposed them to the internet.
-   - Set up virtual networks and resource groups for the VMs, assigned them to the same region, and configured Network Security Groups (NSGs) to permit inbound internet traffic.
-   - Disabled the internal firewall on the Windows VM.
+### 2. Software Installation and Configuration
 
-2. **MS SQL Server Installation**
-   - Installed MS SQL and Studio Manager on the Windows VM.
-   - Configured SQL logs to integrate with Windows Event Manager logs.
+- **Microsoft SQL and Studio Manager**: These were installed on the Windows VM to add complexity to the lab environment and provide additional targets for the simulated attacks.
+- **Log Integration**: SQL logs were integrated with the Windows Event Manager to centralize logging and facilitate analysis.
 
-3. **Attack Simulation**
-   - Created an attack VM to simulate attacks on the Windows and Linux VMs and the SQL database.
-   - Analyzed the resulting logs in the Event Manager and Authentication logs.
+### 3. Attack Simulation
 
-4. **Azure Active Directory Management**
-   - Reviewed Azure Active Directory (AAD), created users with various permissions, and observed user activities at different levels.
+- **Attack VM Setup**: A separate VM was configured to simulate attacks on the Windows and Linux VMs, as well as the SQL database. This allowed for practical experience in detecting and analyzing malicious activities.
+- **Log Analysis**: Logs from the Event Manager and authentication logs were scrutinized to identify and understand the nature of the simulated attacks.
 
-5. **Logging and Monitoring**
-   - Conducted a session on logging at different Azure layers.
-   - Established a Log Analytics workspace as a centralized log aggregator and connected it to Sentinel.
+### 4. Azure Active Directory and Permissions
 
-6. **Microsoft Defender Integration**
-   - Enabled Microsoft Defender for Cloud to funnel all security alerts from the VMs and SQL database into the Log Analytics workspace.
+- **Azure AD Overview**: The lab included an exploration of Azure Active Directory, focusing on the relationships between tenants, subscriptions, and resource groups.
+- **User Permissions**: Different users were created and assigned varying levels of permissions to observe and understand the effects of permission levels on resource access and security.
 
-7. **NSG Flow Log and Data Collection**
-   - Created a storage account for NSG flow logs to enter the Log Analytics workspace.
-   - Configured and tested data collection rules manually and through cloud-based settings.
+### 5. Logging and Monitoring
 
-8. **KQL Deep Dive**
-   - Provided an in-depth lesson on KQL (Kusto Query Language) and its application in analyzing logs.
+- **Log Analytics Workspace**: A central log aggregator was set up to consolidate logs from various sources for analysis.
+- **Microsoft Defender for Cloud**: This feature was enabled to push all security alerts from VMs, the SQL database, and other resources into the log analytics workspace for centralized monitoring.
 
-9. **Azure Sentinel Implementation**
-   - Utilized the imported logs in Sentinel to create attack maps, simulate attack traffic, and define alerts for malicious activities.
-   - Worked through incidents in alignment with NIST 800-61 and hardened the environment following NIST 800-53 guidelines.
+### 6. Security Incident and Event Management (SIEM)
 
-10. **Incident Response and Compliance**
-    - Responded to incidents using NIST 800-61, documenting and closing incidents in Sentinel.
-    - Enabled NIST 800-53 compliance in Microsoft Defender for Cloud and reviewed the secure score.
-    - Implemented NIST 800-53 SC-7 (Boundary Protection), configured NSGs on subnets, enabled built-in firewalls, and configured private links.
+- **Azure Sentinel**: This tool was used to analyze logs, create attack maps for visualizing malicious events, and generate alerts for detected malicious activities.
+- **Incident Response**: Using NIST 800-61 guidelines, incidents were worked through to completion, including detection, analysis, containment, eradication, recovery, and documentation of findings.
 
-**Additional Activities**
+### 7. Compliance and Security Hardening
 
-- Conducted detailed logging at the tenant, subscription, and resource levels using Azure Active Directory, Activity Logs, and Resource Logs.
-- Simulated security incidents, such as brute force attacks and privilege escalations, and utilized NIST 800-61 for effective incident response.
+- **NIST 800-53 Implementation**: Security controls from NIST 800-53 were applied to harden the environment against future attacks. This included configuring NSGs, enabling built-in firewalls, and setting up private links for public internet-exposed resources like storage accounts and key vaults.
+- **Regulatory Compliance and Secure Score**: The Microsoft Defender for Cloud secure score was utilized to evaluate and improve the security posture of the cloud environment.
 
-**Metrics and Attack Maps**
+### Additional Activities
 
-*Pre- and Post-Hardening Metrics*: 
-(See previous tables for specific metric counts before and after hardening)
+- **Logging at Different Levels**: Custom KQL queries were used to analyze logs at the tenant, subscription, and resource levels.
+- **Scheduled Queries and Alert Testing**: Scheduled queries were set up to test alerts for brute force attacks and other malicious activities, with custom incident response playbooks developed for handling detected incidents.
 
-- Notable reduction in security events and incidents post-hardening.
-- Attack maps indicated a significant decrease in malicious activity after security measures were implemented.
+### Conclusion
 
-**Conclusion**
-
-This project effectively demonstrated the construction and analysis of a honeynet within Azure. The implementation of security controls, as guided by NIST 800-61 and 800-53 standards, led to a marked reduction in security events and incidents. The integration of tools like Microsoft Defender for Cloud and Azure Sentinel was pivotal in managing security within the cloud environment. This initiative not only highlighted the effectiveness of Azure's security features but also underscored the importance of proactive security measures in network management.
+This lab provided a hands-on experience with setting up, attacking, and defending cloud-based environments using Azure's security tools and services. Through simulated attacks and the use of Azure's logging, monitoring, and compliance features, participants gained valuable insights into cloud security best practices and incident response strategies.
