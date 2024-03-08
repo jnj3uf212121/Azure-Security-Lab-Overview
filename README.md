@@ -1,3 +1,5 @@
+![SOC Topology](SOC TOPOLOGY.jpg)
+
 # Lab Documentation: Azure Security Lab Overview
 
 ## Overview
