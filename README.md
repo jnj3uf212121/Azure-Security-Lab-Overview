@@ -1,4 +1,4 @@
-![SOC Topology](SOC TOPOLOGY.jpg)
+![SOC TOPOLOGY](https://github.com/jnj3uf212121/Azure-Security-Lab-Overview/assets/148787196/11aec0a1-bfe3-44c8-aed3-cf77a71802cb)
 
 # Lab Documentation: Azure Security Lab Overview
 
