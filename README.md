@@ -4,7 +4,7 @@
 
 ## Overview
 
-This document outlines the steps and procedures undertaken during a comprehensive security lab involving Azure cloud services. The lab's primary focus was to set up a controlled environment to simulate cyber attacks, analyze security logs, and implement security best practices using Microsoft Azure tools. The following sections detail the lab's setup, activities, and learnings.
+Developed and executed a comprehensive security lab focused on Azure cloud services, encompassing setup, attack simulation, logging, monitoring, compliance, and incident response.
 
 ### 1. Lab Setup
 
@@ -51,4 +51,4 @@ This document outlines the steps and procedures undertaken during a comprehensiv
 
 This lab provided a hands-on experience with setting up, attacking, and defending cloud-based environments using Azure's security tools and services. Through simulated attacks and the use of Azure's logging, monitoring, and compliance features, participants gained valuable insights into cloud security best practices and incident response strategies.
 
-Disclaimer: Please note that the availability of images within this project is limited due to its proprietary nature. This project is not open source as it involves components for which licensing fees have been paid. I extend my gratitude to Josh Makador for his exceptional work in developing this fascinating lab!
+### Disclaimer:  Due to proprietary components and licensing constraints, images and specific details are not included. Gratitude extended to Josh Makador for collaboration on this project.
