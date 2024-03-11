@@ -51,4 +51,6 @@ Developed and executed a comprehensive security lab focused on Azure cloud servi
 
 This lab provided a hands-on experience with setting up, attacking, and defending cloud-based environments using Azure's security tools and services. Through simulated attacks and the use of Azure's logging, monitoring, and compliance features, participants gained valuable insights into cloud security best practices and incident response strategies.
 
-### Disclaimer:  Due to proprietary components and licensing constraints, images and specific details are not included. Gratitude extended to Josh Makador for collaboration on this project.
+### Disclaimer:  Please note that the availability of images within this project is limited due to its proprietary nature. This project is not open source as it involves components for which licensing fees have been paid. I extend my gratitude to Josh Makador for his exceptional work in developing this fascinating lab!
+
+
