@@ -1,7 +1,5 @@
 ![SOC TOPOLOGY](https://github.com/jnj3uf212121/Azure-Security-Lab-Overview/assets/148787196/11aec0a1-bfe3-44c8-aed3-cf77a71802cb)
 
-# Lab Documentation: Azure Security Lab Overview
-
 ## Overview
 
 Developed and executed a comprehensive security lab focused on Azure cloud services, encompassing setup, attack simulation, logging, monitoring, compliance, and incident response.
